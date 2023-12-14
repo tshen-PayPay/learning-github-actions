@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Install tree
       run: |
-        brew update
-        brew install tree
+        arch -arm64 brew update
+        arch -arm64 brew install tree
     - name: Execute tree
       run: time tree | tee filetreelist.txt
