@@ -1,4 +1,4 @@
-name: Simple Go Build
+name: Simple Go Build Chapter2
 
 on:
   push:
