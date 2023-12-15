@@ -6,7 +6,7 @@ on:
 # More on defaults variable settings: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaults
 defaults:
   run:
-    shell: bash
+    shell: sh
     working-directory: ./workdir
 
 jobs:
@@ -25,14 +25,17 @@ jobs:
   report-url:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: echo $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
   report-url_too:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
   report-os:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: check-os
         if: runner.os != 'Windows'
         run: echo "The runner's operating system is $RUNNER_OS."
