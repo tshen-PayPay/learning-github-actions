@@ -21,7 +21,7 @@ jobs:
       - run: |
           echo "in test, when defaults are specified at both level, the job settings will override the workflow settings."
           echo "shell=$shell"
-          echo "working-directory=${working-directory}"
+          echo "working-directory=${{ working-directory }}"
   report-url:
     runs-on: ubuntu-latest
     steps:
