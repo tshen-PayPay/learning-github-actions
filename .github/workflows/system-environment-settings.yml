@@ -3,6 +3,7 @@ name: system-environment-settings chapter6
 on:
   push:
 
+# More on defaults variable settings: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaults
 defaults:
   run:
     shell: bash
