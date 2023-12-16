@@ -25,6 +25,7 @@ jobs:
         with:
           path: |
             **/node_modules
+          # yarn.lock文件必须手动创建！
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
 
       - run: yarn install
